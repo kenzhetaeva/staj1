@@ -1,0 +1,260 @@
+body{
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+.section_full{
+	height: 100%;
+	width: 100%;
+	background-color: black; 
+	position: relative;
+}
+.section_1{
+	height: 20vh;
+	width: 80%;
+	background-color: gray;
+	margin-left: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	perspective: 10000px;
+	transform-style: preserve-3d;
+}
+.shapka{
+	width: 95%;
+	height: 65%;
+	background-color: gray;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.site_name{
+	height: 70%;
+	width: 20%;
+	border-bottom: 2px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:yellow;
+	transition: 1.5s;
+}
+.site_name:hover{
+	color:green;
+	cursor: pointer;
+	border-bottom: 2px solid yellow;
+	transform: translateZ(100px);
+	opacity: 1;
+}
+.section_2{
+	height: 15vh;
+	width: 80%;
+	background-color: gray;
+	margin-left: 10%;
+	position:relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	perspective: 1000px;
+}
+.menu{
+	width: 87.5%;
+	height: 65%;
+	background-color: gray;
+	position: relative;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	transform-style: preserve-3d;	
+	perspective: 1000px;
+	margin-left: 4.5%;
+}
+#menu_icon{
+	float: left;
+	margin: 0;
+	width: 5.6%;
+	height: 84%;
+	background-color: white;
+	position: absolute;
+	z-index: 2;
+	border-radius: 28px;
+	transition: 1s;
+}
+.lines{
+	position: absolute;
+	top: 50%;
+	margin-top: -1px;
+	left: 50%;
+	margin-left: -25%;
+	height: 2px;
+	width: 50%;
+	background-color: black;
+	transition: 1s;
+}
+.lines::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -1px;
+	left: 50%;
+	margin-left: -50%;
+	height: 2px;
+	width: 100%;
+	background-color: black;
+	transition: 1s;
+	transform: translateY(-6px);
+}
+.lines::after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -1px;
+	left: 50%;
+	margin-left: -50%;
+	height: 2px;
+	width: 100%;
+	background-color: black;
+	transition: 1s;
+	transform: translateY(6px);
+ }
+ #menu_icon:hover{
+ 	cursor: pointer;
+ }
+ #menu_icon:hover + .menu_links{
+ 	transform: scaleX(1) translateX(0px);
+ 	opacity: 1;
+ }
+  .menu_links:hover{
+ 	transform: scaleX(1);
+ 	opacity: 1;
+ }
+.menu_links{
+	float: left;
+	margin: 0;
+	height: 84%;
+	width: 90%;
+	background-color: white;
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	transform-origin:left center;
+	transform: scaleX(0) translateX(50px); 
+	transition: 0.5s;
+	opacity: 0;
+	perspective: 1000px;
+}
+.links{
+	display: block;
+	background-color: rgb(0,0,1,0.5);
+	color:green;
+	text-decoration: none;
+	margin-left: 8%; 
+	width: 10%;
+	height: 70%;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border:2px solid green; 
+	transform:translateZ(-60px);
+	transition: 0.5s;
+}
+.links:hover{
+	background-color: gray;
+	border: 1px solid red;
+	color :red;
+	transform:translateZ(20px);
+	box-shadow: 10px;
+}
+.section_3{
+	perspective: 1000px;
+	height: 75vh;
+	width: 80%;
+	background-color: gray;
+	margin-left: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header{
+	width: 85%;
+	height: 75%;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 1s;
+}
+.header img{
+	transform: translateZ(-30px);
+	position: absolute;
+	transition: 1s;
+	border-radius: 30px;
+}
+#h{
+	position: absolute;
+	color:white;
+	transform:translateY(120px);
+	transition: 1s;
+}
+.header img:hover{
+	transform: translateZ(-10px);
+}
+.header img:hover + #h{
+	color:yellow;
+	transform:translateY(80px);
+}
+.section_4{
+	perspective: 1000px;
+	height: 100%;
+	width: 80%;
+	background-color: gray;
+	margin-left: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ramka{
+	width: 83%;
+	background-color: white;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content{
+	margin-top: 7%;
+	margin-bottom: 7%;
+	margin-left: 3%;
+	margin-right: 3%;
+	color: pink;
+}
+.section_5{
+	perspective: 1000px;
+	height: 40vh;
+	width: 80%;
+	background-color: gray;
+	margin-left: 10%;
+	display: flex;
+	justify-content: center;
+}
+.footer{
+	margin-top: 5%;
+	width: 83%;
+	height: 75%;
+	background-color: rgba(0,0,35,1);
+	border-radius: 20px;
+	color:pink;
+}
+.footer span{
+	float:right;
+	margin-right: 2%;
+	margin-top: 15%;
+}
