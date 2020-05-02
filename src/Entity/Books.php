@@ -26,6 +26,11 @@ class Books
      */
     private $content;
 
+    /**
+     * @ORM\Column(type="string", length=32)
+     */
+    private $type;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -51,6 +56,18 @@ class Books
     public function setContent(?string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    public function setType(string $type): self
+    {
+        $this->type = $type;
 
         return $this;
     }

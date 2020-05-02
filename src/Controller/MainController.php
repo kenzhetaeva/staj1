@@ -18,6 +18,66 @@ class MainController extends AbstractController{
 	}
 
 	/**
+     * @Route("/find_classic_books", name="classicBooks")
+     */
+    public function classicBooks() {
+		$repository = $this->getDoctrine()->getRepository(Books::class);
+		$book = $repository->findTypeOfBook("classic");
+
+		return $this->render('book.html.twig', ["book" => $book]);
+	}
+
+	/**
+     * @Route("/find_comic_books", name="comicBooks")
+     */
+    public function comicBooks() {
+		$repository = $this->getDoctrine()->getRepository(Books::class);
+		$book = $repository->findTypeOfBook("comic");
+
+		return $this->render('book.html.twig', ["book" => $book]);
+	}
+
+	/**
+     * @Route("/find_fantastic_books", name="fantasticBooks")
+     */
+    public function fantasticBooks() {
+		$repository = $this->getDoctrine()->getRepository(Books::class);
+		$book = $repository->findTypeOfBook("fantastic");
+
+		return $this->render('book.html.twig', ["book" => $book]);
+	}
+
+	/**
+     * @Route("/find_romantic_books", name="romanticBooks")
+     */
+    public function romanticBooks() {
+		$repository = $this->getDoctrine()->getRepository(Books::class);
+		$book = $repository->findTypeOfBook("romantic");	
+
+		return $this->render('book.html.twig', ["book" => $book]);
+	}
+
+	/**
+     * @Route("/find_detective_books", name="detectiveBooks")
+     */
+    public function detectiveBooks() {
+		$repository = $this->getDoctrine()->getRepository(Books::class);
+		$book = $repository->findTypeOfBook("detective");
+
+		return $this->render('book.html.twig', ["book" => $book]);
+	}
+
+	/**
+     * @Route("/find_fairy_tales", name="fairyTales")
+     */
+    public function fairyTales() {
+		$repository = $this->getDoctrine()->getRepository(Books::class);
+		$book = $repository->findTypeOfBook("fairy tales");
+
+		return $this->render('book.html.twig', ["book" => $book]);
+	}
+
+	/**
       * @Route("/books", name="books")
       */
 	  public function books() {
@@ -82,6 +142,7 @@ class MainController extends AbstractController{
         $book = new Books();
         $book->setName($request->request->get('name'));
 		$book->setContent($request->request->get('content'));
+		$book->setType($request->request->get('type'));
 
         $entityManager->persist($book);
 		$entityManager->flush();
@@ -150,7 +211,8 @@ class MainController extends AbstractController{
 		$book = $entityManager->getRepository(Books::class)->find($id);
 		
         $book->setName($request->request->get('name'));
-        $book->setContent($request->request->get('content'));
+		$book->setContent($request->request->get('content'));
+		$book->setType($request->request->get('type'));
 		
 		$entityManager->flush();
 
