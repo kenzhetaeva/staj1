@@ -72,7 +72,7 @@ class MainController extends AbstractController{
      */
     public function fairyTales() {
 		$repository = $this->getDoctrine()->getRepository(Books::class);
-		$book = $repository->findTypeOfBook("fairy tales");
+		$book = $repository->findTypeOfBook("fairy tale");
 
 		return $this->render('book.html.twig', ["book" => $book]);
 	}

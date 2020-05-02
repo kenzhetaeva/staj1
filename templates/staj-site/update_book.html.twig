@@ -11,20 +11,21 @@
 	<form method="POST" action="{{path('updateReadyBook')}}">
 		<input type="hidden" name="id" value = "{{ book.getId }}"><br><br>
 		<label >Enter book's name</label><br>
-		<textarea name="name" rows="2" cols="25">{{ book.getName }} </textarea><br><br>
+		<textarea name="name" rows="2" cols="30">{{ book.getName }} </textarea><br><br>
 		
 		<label >Enter content of book</label><br>
-		<textarea name="content" rows="4" cols="50">{{ book.getContent }} </textarea><br><br>
+		<textarea name="content" rows="6" cols="50">{{ book.getContent }} </textarea><br><br>
 		
 		Type of book: 
 		<select name = "type">
+			<option>{{ book.getType }} </option>
 			<option value="fairy_tale">None</option>
 			<option value="classic">Classic</option>
 			<option value="comic">Comic</option>
 			<option value="fantastic">Fantastic</option>
 			<option value="romantic">Romantic</option>
 			<option value="detective">Detective</option>
-			<option value="fairy tales">Fairy tales</option>
+			<option value="fairy tale">Fairy tale</option>
 		</select><br><br><br>
 
 		<h3><button type="submit" class="save btn btn-default">Save</button><h3>
