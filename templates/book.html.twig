@@ -5,8 +5,7 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 	<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="{{ asset('css_1.css') }}">
-	<script type="text/javascript" src="{{ asset('js_1.js') }}"></script>
+	<link rel="stylesheet" type="text/css" href="{{ asset('style.css') }}">
 </head>
 <body style="font-family:'Segoe Print';">
 	<style>
@@ -53,11 +52,11 @@
 					<span class="lines"> </span>
 				</div>
 				<nav class="menu_links">
-					<a href="{{ path('index') }}" class="links"type="button">HOME</a>
-					<a href="{{ path('books') }}" class="links"type="button">BOOKS</a>
-					<a href="{{ path('aboutUs') }}" class="links"type="button">ABOUT US</a>
-					<a href="{{ path('setting') }}" class="links"type="button">SETTINGS</a>
-					<a href="{{ path('register') }}" class="links"type="button">REGISTER</a>
+					<a href="{{ path('index') }}" class="links home" type="button">HOME</a>
+					<a href="{{ path('books') }}" class="links books" type="button">BOOKS</a>
+					<a href="{{ path('aboutUs') }}" class="links ab_us" type="button">ABOUT US</a>
+					<a href="#" class="links setting_menu" type="button">SETTINGS</a>
+					<a href="{{ path('register') }}" class="links register" type="button">REGISTER</a>
 				</nav>
 			</div>
 		</section>
@@ -88,9 +87,10 @@
 			</div>
 		<section class="section_5">
 			<div class="footer">
-				<span>Testing site !</span>
+				<span>Авторские права этого сайта принадлежат  Кенжетаевой Айдане и Алтынбек уулу Аманкулу</span>
 			</div>
 		</section>
 	</section>
+	<script src="{{ asset('javas.js') }}"></script>
 </body>
 </html>
