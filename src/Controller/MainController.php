@@ -95,13 +95,6 @@ class MainController extends AbstractController{
 	}
 
 	/**
-      * @Route("/setting", name="setting")
-      */
-	  public function setting() {
-		return $this->render('staj-site/setting.html.twig', []);
-	}
-
-	/**
       * @Route("/register", name="register")
       */
 	  public function register() {

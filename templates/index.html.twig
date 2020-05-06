@@ -2,12 +2,89 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="{{ asset('css_1.css') }}">
-	<script type="text/javascript" src="{{ asset('js_1.js') }}"></script>
+	<link rel="stylesheet" type="text/css" href="{{ asset('style.css') }}">
 </head>
 <body style="font-family:'Segoe Print';">
+	
+	<div class="x_icon"> 
+		<img src="{{ asset('img/x.png') }}" width="40px" height="40px" class="xxx">
+	</div>
+
+	<div class="setting_fon"></div>
+
+	<div class = "setting">
+		<h2>Settings</h2>
+
+		<label>Page_bg: </label>
+		<select class="setting_values">
+			<option>black</option>
+			<option>white</option>
+			<option>blue</option>
+			<option>yellow</option>
+			<option>green</option>
+			<option>gray</option>
+			<option>red</option>
+			<option>pink</option>
+		</select><br>
+
+		<label>Menu_bg: </label>
+		<select class="setting_values">
+			<option>black</option>
+			<option>white</option>
+			<option>blue</option>
+			<option>yellow</option>
+			<option>green</option>
+			<option>gray</option>
+			<option>red</option>
+			<option>pink</option>
+		</select><br>
+
+		<label>Content_bg: </label>
+		<select class="setting_values">
+			<option>black</option>
+			<option>white</option>
+			<option>blue</option>
+			<option>yellow</option>
+			<option>green</option>
+			<option>gray</option>
+			<option>red</option>
+			<option>pink</option>
+		</select><br>
+
+		<label>Footer_bg: </label>
+		<select class="setting_values">
+			<option>black</option>
+			<option>white</option>
+			<option>blue</option>
+			<option>yellow</option>
+			<option>green</option>
+			<option>gray</option>
+			<option>red</option>
+			<option>pink</option>
+		</select><br>
+
+		<label>Footer_color: </label>
+		<select class="setting_values">
+			<option>black</option>
+			<option>white</option>
+			<option>blue</option>
+			<option>yellow</option>
+			<option>green</option>
+			<option>gray</option>
+			<option>red</option>
+			<option>pink</option>
+		</select><br>
+	</div>
+
+	<button class="knopka" type="submit">Agree</button>
+
 	<section class="section_full">
 		<section class="section_1">
+	
+			<div class="customer_stutus">
+
+			</div>
+
 			<div class="shapka">
 				<div class="site_name"><h2>SMELL BOOKS</h2></div>
 			</div>
@@ -15,22 +92,22 @@
 
 		<section class="section_2">
 			<div class="menu">
-				<div id="menu_icon" onclick="start()">
+				<div id="menu_icon">
 					<span class="lines"> </span>
 				</div>
 				<nav class="menu_links">
-					<a href="{{ path('index') }}" class="links"type="button">HOME</a>
-					<a href="{{ path('books') }}" class="links"type="button">BOOKS</a>
-					<a href="{{ path('aboutUs') }}" class="links"type="button">ABOUT US</a>
-					<a href="{{ path('setting') }}" class="links"type="button">SETTINGS</a>
-					<a href="{{ path('register') }}" class="links"type="button">REGISTER</a>
+					<a href="{{ path('index') }}" class="links home" type="button">HOME</a>
+					<a href="{{ path('books') }}" class="links books" type="button">BOOKS</a>
+					<a href="{{ path('aboutUs') }}" class="links ab_us" type="button">ABOUT US</a>
+					<a href="#" class="links setting_menu" type="button">SETTINGS</a>
+					<a href="{{ path('register') }}" class="links register" type="button">REGISTER</a>
 				</nav>
 			</div>
 		</section>
 {% block body %}
 		<section class="section_3">
 			<div class="header">
-				<img src="{{ asset('img/night.jpg') }}" width="100%" height="100%">
+				<img src="{{ asset('img/book.jpg') }}" width="100%" height="100%">
 				<a href="{{ path('classicBooks') }}" <h3 id="h">Classic books</h3></a>
 			</div>
 		</section>
@@ -82,9 +159,10 @@
 
 		<section class="section_5">
 			<div class="footer">
-				<span>Testing site !</span>
+				<span>Авторские права этого сайта принадлежат  Кенжетаевой Айдане и Алтынбек уулу Аманкулу</span>
 			</div>
 		</section>
 	</section>
+	<script src="{{ asset('javas.js') }}"></script>
 </body>
 </html>
