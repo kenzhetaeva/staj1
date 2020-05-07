@@ -24,7 +24,7 @@ class MainController extends AbstractController{
 		$repository = $this->getDoctrine()->getRepository(Books::class);
 		$book = $repository->findTypeOfBook("classic");
 
-		return $this->render('book.html.twig', ["book" => $book]);
+		return $this->render('staj-site/book.html.twig', ["book" => $book]);
 	}
 
 	/**
@@ -34,7 +34,7 @@ class MainController extends AbstractController{
 		$repository = $this->getDoctrine()->getRepository(Books::class);
 		$book = $repository->findTypeOfBook("comic");
 
-		return $this->render('book.html.twig', ["book" => $book]);
+		return $this->render('staj-site/book.html.twig', ["book" => $book]);
 	}
 
 	/**
@@ -44,7 +44,7 @@ class MainController extends AbstractController{
 		$repository = $this->getDoctrine()->getRepository(Books::class);
 		$book = $repository->findTypeOfBook("fantastic");
 
-		return $this->render('book.html.twig', ["book" => $book]);
+		return $this->render('staj-site/book.html.twig', ["book" => $book]);
 	}
 
 	/**
@@ -54,7 +54,7 @@ class MainController extends AbstractController{
 		$repository = $this->getDoctrine()->getRepository(Books::class);
 		$book = $repository->findTypeOfBook("romantic");	
 
-		return $this->render('book.html.twig', ["book" => $book]);
+		return $this->render('staj-site/book.html.twig', ["book" => $book]);
 	}
 
 	/**
@@ -64,7 +64,7 @@ class MainController extends AbstractController{
 		$repository = $this->getDoctrine()->getRepository(Books::class);
 		$book = $repository->findTypeOfBook("detective");
 
-		return $this->render('book.html.twig', ["book" => $book]);
+		return $this->render('staj-site/book.html.twig', ["book" => $book]);
 	}
 
 	/**
@@ -74,7 +74,7 @@ class MainController extends AbstractController{
 		$repository = $this->getDoctrine()->getRepository(Books::class);
 		$book = $repository->findTypeOfBook("fairy tale");
 
-		return $this->render('book.html.twig', ["book" => $book]);
+		return $this->render('staj-site/book.html.twig', ["book" => $book]);
 	}
 
 	/**
@@ -84,7 +84,7 @@ class MainController extends AbstractController{
 		$repository = $this->getDoctrine()->getRepository(Books::class);
 		$book = $repository->findAll();
 		
-		return $this->render('book.html.twig', ["book" => $book]);
+		return $this->render('staj-site/book.html.twig', ["book" => $book]);
 	}
 
 	/**

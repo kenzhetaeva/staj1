@@ -1,0 +1,60 @@
+{% extends 'index.html.twig' %}
+
+{% block body %}
+    <style>
+        .page-header {
+            background-color: #d1ff47;
+            padding: 10px 10px 10px 10px;
+            margin: 3% 10% 3% 10%;
+        }
+
+        .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+            color: #ffffff;
+            font-size: 36pt;
+            margin: 3% 10% 3% 10%;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Segoe Print';
+        }
+
+        .content {
+            margin-left: 12%;
+        }
+
+        .post-form textarea, .post-form input {
+            width: 100%;
+        }
+
+        .top-menu, .top-menu:hover, .top-menu:visited {
+            color: #ffffff;
+            float: right;
+            font-size: 26pt;
+        }
+    </style>
+	<div class="page-header">
+        <a href="{{ path('newBook') }}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        <h1><a href = "/books">To learn to read is to light a fire</a></h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                    <h2>List of books</h2><br>	
+                    
+                    {% for b in book %}
+                        <form method="POST" action="{{path('showBook')}}">
+                            <input type="hidden" name="id" value = "{{ b.getId }}">
+                            <h3><button>{{ b.getName }} </button><h3>
+                        </form>
+                        <form method="POST" action="{{path('deleteBook')}}">
+                            <input type="hidden" name="id" value = "{{ b.getId }}">
+                            <button type="submit" class="save btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+                        </form>
+                        <br>
+                    {% endfor %}	
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
